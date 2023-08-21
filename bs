@@ -20,7 +20,6 @@ with user_summary as (
     from layerzero.send
     group by 1
 ),
-
 user_summary_with_rank as (
     select *,
         (
