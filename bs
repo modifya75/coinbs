@@ -10,6 +10,7 @@ with user_summary as (
         max(block_time) as last_block_time,
         date_diff('day', min(block_time), now()) as lz_age_days,
         count(distinct source_chain_id) as active_source_chain_count,
+
         count(distinct destination_chain_id) as active_destination_chain_count,
         count(distinct transaction_contract) as active_transaction_contract_count,
         count(distinct date_trunc('day', block_time)) as active_days_count,
